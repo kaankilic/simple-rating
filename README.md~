@@ -8,25 +8,6 @@ $ npm install simple-rating --save
 ```
 
 ### Examples
-```vue
-<template>
-  <form>
-    <rating :max="5" :value="3" :disabled="true" :icon="fa fa-user"></rating>
-  </form>
-  {{ value }}
-</template>
-
-<script>
-import Rating from 'simple-rating'
-
-export default {
-  components: {
-    Rating
-  }
-}
-</script>
-
-```
 
 ### Badges
 
