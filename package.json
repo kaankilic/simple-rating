@@ -1,6 +1,6 @@
 {
   "name": "simple-rating",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple Rating is rating component is based on font-awesome icons for VueJS",
   "main": "src/SimpleRating.vue",
   "scripts": {
