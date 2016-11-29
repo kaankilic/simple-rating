@@ -1,6 +1,8 @@
 # Simple Rating v1.0
 Simple Rating component is creating a rating module from font-awesome icons for VueJS. 
 
+For demo you can check [rankvapor](http://en.rankvapor.com)
+
 ### Installation
 
 ```
