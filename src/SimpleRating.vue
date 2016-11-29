@@ -1,38 +1,15 @@
 <template>
   <div class="ratings">
     <div class="rating" v-for="n in max">
-      <i v-bind:class="icon" v-on:mouseover="star_over(n)" v-on:mouseout="star_out" v-on:click.stop.prevent="star_selected(n)" :class="{'active' : (overwritten_value >= n)}"></i>
+      <i class="fa fa-star" v-on:mouseover="star_over(n)" v-on:mouseout="star_out" v-on:click.stop.prevent="star_selected(n)" :class="{'active' : (overwritten_value >= n)}"></i>
     </div>
-  <div class="search-input" v-if="!disabled">
-    <select v-bind:name="name">
-      <option v-for="n in max" v-bind:selected="overwritten_value==n" v-bind:value="n" v-text="n">1</option>
-    </select>
-  </div>
+    <div class="search-input" v-if="!disabled">
+      <select v-bind:name="s_name">
+        <option v-for="n in max" v-bind:selected="overwritten_value==n" v-bind:value="n" v-text="n">1</option>
+      </select>
+    </div>
   </div>
 </template>
-<style lang="scss">
-  .ratings{
-    display: block;
-    .rating{
-      display: inline-block;
-      .fa{
-        font-size: 18px;
-        color:#767676;
-        margin-right:5px;
-        opacity: 0.7;
-        cursor: pointer;
-      }
-      .fa-star.active{
-        color:#F1C40F;
-      }
-    }
-  }
-  .search-input {
-    select{
-      display:none;
-    }
-  }
-</style>
 <script>
     export default {
       data:function () {
@@ -45,10 +22,10 @@
         max: Number,
         value: Number,
         disabled: Boolean,
-        name: String,
+        s_name: String,
         icon: {
-          "type":String,
-          "default": "fa fa-user"
+          type:String,
+          default: "fa fa-star"
         }
       },
       ready:function() {
@@ -80,3 +57,4 @@
       }
     }
 </script>
+
